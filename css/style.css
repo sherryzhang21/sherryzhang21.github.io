@@ -1,6 +1,7 @@
 body
 {
     width: 100%;
+	font:normal100%Helvetica,Arial,sans-serif;
 }
 .top-menu{
     padding-top: 1.8em;
@@ -15,7 +16,7 @@ body
 .top-menu ul li a{
     color:#FFFFFF;
     text-decoration:none;
-    font-size:15px;
+    font-size:0.95em;
     display:block;
     padding:0.5em 1em;
     font-weight:700;
@@ -27,17 +28,17 @@ body
 }
 .header
 {
-    padding-top: 40px;
-    height: 565px;
+    padding-top: 1rem;
+    height: 35rem;
     background: url(../img/banner.png) no-repeat;
     position: relative;
     float: left;
 }
 .header-banner-info
 {
-    width:850px;
-    height: 400px;
-    padding-top: 20px;
+    width:65%;
+    height: 35rem;
+    padding-top: 1rem;
     text-align: center;
     color: white;
     position: relative;
@@ -73,12 +74,12 @@ body
 }
 .copy-rights p{
     color:#AAAAAA;
-    font-size:14px;
+    font-size:0.85em;
     font-weight:300;
 }
 .copy-rights a{
     color:#fff;
-    font-size:14px;
+    font-size:0.85em;
     font-weight:300;
 }
 .copy-rights a:hover{
