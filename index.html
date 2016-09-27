@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head lang="zh-CN">
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<head lang="en">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
     <title>Sherry</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="header">
-            <div class="top-menu">
-                <ul>
-                    <li><a>About me</a></li>
-                    <li><a>Blog</a></li>
-                    <li><a>Contact</a></li>
-                </ul>
-            </div>
-            <div class="header-banner-info">
-                <a href="#"><img style="width: 150px; height: 150px" src="./img/head.jpg" alt="是不是傻" class="img-circle"/></a>
-                <h3>HELLO</h3>
-                <h1>my name is <span>Sherry,</span> </h1>
-                <p>I'm a &nbsp;<del>coder</del>&nbsp;&nbsp;<strong>carrier</strong></p>
-                <span class="line"></span>
-            </div>
+    <div class="header">
+        <div class="top-menu">
+            <ul>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#about" class="smoothScroll">About</a></li>
+            </ul>
         </div>
+        <div class="header-banner-info">
+            <img src="./img/head.jpg" alt="是不是傻" class="head-img img-circle"/>
+            <h3>HELLO</h3>
+            <h1>my name is <span>Sherry,</span> </h1>
+            <p>I'm a &nbsp;<del>coder</del>&nbsp;&nbsp;<strong>carrier</strong></p>
+        </div>
+    </div>
+    <section class="parallax-section">
+        <div class="content">
+            <a name="about">about</a>
+        </div>
+    </section>
 
-        <div style="height: 500px; border: solid 1px">
-            About me
-        </div>
-        <div style="height: 500px; border: solid 1px">
-            Blog
-        </div>
-        <div style="height: 500px; border: solid 1px">
-            Contact
-        </div>
+    <div class="content">
+        <a name="blog">blog</a>
+    </div>
+    <div class="content">
+        <a name="contact">contact</a>
+    </div>
 
-        <div class="footer">
-            <div class="container-fluid">
-                <div class="copy-rights text-center">
-                    <p>&copy; 2016 Template by <a href="https://sherryzhang21.github.io" target="target_blank">Sherryzhang21</a></p>
-                </div>
+    <div class="footer">
+        <div class="container-fluid">
+            <div class="copy-rights text-center">
+                <p>&copy; 2016 Template by <a href="https://sherryzhang21.github.io" target="target_blank">Sherryzhang21</a></p>
             </div>
         </div>
     </div>
+
+    <script src="js/jquery.js"></script>
+    <script href="js/bootstrap.min.js"></script>
+    <script src="js/flexible.js"></script>
+    <script src="js/custom.js"></script>
 </body>
 </html>

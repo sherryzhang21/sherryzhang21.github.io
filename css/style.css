@@ -1,87 +1,94 @@
-body
-{
+*{
+    margin:0;
+    padding:0;
+    border: 0;
+}
+.header{
     width: 100%;
-	font:normal100%Helvetica,Arial,sans-serif;
+    min-height: 80vh;
+    background: url("../img/banner.png") center no-repeat;
+    background-size: cover;
+    color: white;
+    float: left;
 }
 .top-menu{
-    padding-top: 1.8em;
-    float: right;
+    padding-top: 0.5rem;
 }
 .top-menu ul li{
     display:inline-block;
     text-transform:uppercase;
-    float:left;
-    margin: 0 6em;
+    float:right;
 }
 .top-menu ul li a{
-    color:#FFFFFF;
+    color: white;
     text-decoration:none;
-    font-size:0.95em;
+    font-size:0.3rem;
     display:block;
-    padding:0.5em 1em;
     font-weight:700;
-}
-.top-menu ul li a:hover {
-    cursor: pointer;
-    background: #F0F0F0;
-    color:#B0E0E6;
-}
-.header
-{
-    padding-top: 1rem;
-    height: 35rem;
-    background: url(../img/banner.png) no-repeat;
-    position: relative;
-    float: left;
+    padding:0.1rem 0.4rem;
 }
 .header-banner-info
 {
-    width:65%;
-    height: 35rem;
-    padding-top: 1rem;
+    width: 100%;
+    padding-top: 0.25rem;
     text-align: center;
-    color: white;
     position: relative;
-    float: right;
+    float: left;
 }
 .header-banner-info h3{
-    font-size:3em;
+    font-size:1rem;
     font-weight:300;
-    color:#FFFFFF;
-    margin: 0.9em 0 0.3em 0;
+    margin-top: 0.1rem;
 }
 .header-banner-info h1{
-    font-size:5em;
+    font-size: 0.8rem;
     font-weight:300;
-    color:#FFFFFF;
 }
 .header-banner-info span{
     font-weight:700;
-    color:#FFFFFF;
 }
 .header-banner-info p{
     font-weight:300;
-    color:#FFFFFF;
-    font-size:1.5em;
-    margin: 1.2em 0 1.6em 0;
+    font-size:0.5rem;
 }
-
-
+.content{
+    width: 100%;
+    height: 15rem;
+    border: solid 1px red;
+    z-index: 1;
+}
 .footer{
     text-align: center;
-    padding:2em 0;
-    background: url("../img/banner.png") no-repeat;
+    padding:0.7rem 0;
+    background: url("../img/banner.png") bottom no-repeat;
 }
 .copy-rights p{
     color:#AAAAAA;
-    font-size:0.85em;
+    font-size:0.3rem;
     font-weight:300;
 }
 .copy-rights a{
     color:#fff;
-    font-size:0.85em;
+    font-size:0.3rem;
     font-weight:300;
 }
 .copy-rights a:hover{
     color:#B0E0E6;
+}
+@media only screen and (min-width: 320px) and (max-width: 780px){
+    .header{
+        background: url("../img/banner1.png") center no-repeat;
+        background-size: cover;
+        min-height: 40vh;
+    }
+    .head-img{
+        width: 2rem;
+    }
+    .header-banner-info h1{
+        margin-top: 0.2rem;
+    }
+    .footer{
+        padding:0.4rem 0;
+        background: url("../img/banner1.png") bottom no-repeat;
+    }
 }
