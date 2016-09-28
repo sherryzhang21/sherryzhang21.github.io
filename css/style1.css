@@ -1,0 +1,122 @@
+@import url('reset.css');
+body{
+	font-family: Georgia, "Times New Roman",sans-serif;
+	font-size:12px;
+}
+.iw_wrapper{
+	width:90%;
+	height: 18rem;
+	margin:0.8rem auto 0.8rem auto;
+	position:relative;
+	border: solid 1px red;
+}
+ul.iw_thumbs li{
+	float:left;
+	margin:0.1rem;
+}
+ul.iw_thumbs li div{
+	position:absolute;
+	top:0.1rem;
+	width:5rem;
+	padding:0rem 0.3rem;
+	display:none;
+	color:#fff;
+	z-index:100;
+}
+ul.iw_thumbs li div h2{
+	font-family: 'Wire One', arial, serif;
+	font-size:0.7rem;
+	text-transform:uppercase;
+	text-shadow:0px 0px 1px #fff;
+}
+ul.iw_thumbs li div p{
+	font-size:0.2rem;
+	line-height:0.5rem;
+	font-style:italic;
+}
+ul.iw_thumbs li:nth-child(1){
+	margin-left:0.5rem;
+}
+ul.iw_thumbs li:nth-child(even){
+	margin-top: 1rem;
+}
+ul.iw_thumbs li:nth-child(3n){
+	margin-left: 0.5rem;
+}
+ul.iw_thumbs li img{
+	border:7px solid #fff;
+	cursor:pointer;
+	position:relative;
+	-moz-box-shadow:1px 1px 1px #aaa;
+	-webkit-box-shadow:1px 1px 1px #aaa;
+	box-shadow:1px 1px 1px #aaa;
+}
+ul.iw_thumbs li img:hover{
+	-moz-box-shadow:1px 1px 7px #777;
+	-webkit-box-shadow:1px 1px 7px #777;
+	box-shadow:1px 1px 7px #777;
+}
+ul.iw_thumbs li:nth-child(even) img{
+	height:2rem;
+}
+ul.iw_thumbs li:nth-child(odd) img{
+	height:2.2rem;
+}
+ul.iw_thumbs li:nth-child(5n) img{
+	height:2.5rem;
+}
+ul.iw_thumbs li:nth-child(6n) img{
+	height:1.8rem;
+}
+ul.iw_thumbs li:nth-child(7n) img{
+	height:2rem;
+}
+.iw_ribbon{
+	position:fixed;
+	height:2.1rem; /*first 126 then 0 to close and 100% to open (while top goes to 0) */
+	width:0px;/*first 0 then animate to 100%*/
+	left:0px;/*or right 0*/
+	top:0px; /*First, top of thumb, then animate to 0*/
+	background:#000;
+	opacity:0.8;
+	z-index:10;
+	overflow:hidden;
+	display:none;
+}
+.iw_close{
+	position:absolute;
+	top:0.2rem;
+	right:0.2rem;
+	background:#f0f0f0 url(../img/close.gif) no-repeat center center;
+	width:0.3rem;
+	height:0.3rem;
+	display:none;
+	cursor:pointer;
+}
+.iw_zoom{
+	color:white;
+	font-size:8px;
+	font-family:Arial, sans-serif;
+	text-transform:uppercase;
+	padding:14px;
+	display:none;
+	float:right;
+	margin-right:30px;
+}
+.iw_ribbon img{
+	position:absolute;
+	top:50%;
+	left:50%;
+	border:7px solid #fff;
+}
+.iw_loading{
+	background: #fff url(../img/loader.gif) no-repeat center center;
+	width:28px;
+	height:28px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	z-index: 10000;
+	margin: -14px 0px 0px -14px;
+	opacity:0.8;
+}
