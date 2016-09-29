@@ -4,11 +4,11 @@ body{
 	font-size:12px;
 }
 .iw_wrapper{
-	width:90%;
-	height: 18rem;
-	margin:0.8rem auto 0.8rem auto;
+	width:100%;
+	/*height: 7rem;*/
+	/*margin:1rem auto 0.8rem auto;*/
+	padding: 0.8rem;
 	position:relative;
-	border: solid 1px red;
 }
 ul.iw_thumbs li{
 	float:left;
@@ -60,10 +60,10 @@ ul.iw_thumbs li:nth-child(even) img{
 	height:2rem;
 }
 ul.iw_thumbs li:nth-child(odd) img{
-	height:2.2rem;
+	height:1.5rem;
 }
 ul.iw_thumbs li:nth-child(5n) img{
-	height:2.5rem;
+	height:2.8rem;
 }
 ul.iw_thumbs li:nth-child(6n) img{
 	height:1.8rem;
@@ -98,10 +98,10 @@ ul.iw_thumbs li:nth-child(7n) img{
 	font-size:8px;
 	font-family:Arial, sans-serif;
 	text-transform:uppercase;
-	padding:14px;
+	padding-top: 0.18rem;
 	display:none;
 	float:right;
-	margin-right:30px;
+	margin-right:0.7rem;
 }
 .iw_ribbon img{
 	position:absolute;

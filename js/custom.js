@@ -136,7 +136,7 @@ $(window).load(function(){
                     .data('originalHeight',$img.height())
                     .stop()
                     .animate({
-                        height 		: '100px'
+                        height 		: '1.8rem',
                     }, imgAnim.speed, imgAnim.easing);
 
                 // the ribbon will animate from the left or right
@@ -147,15 +147,30 @@ $(window).load(function(){
                     descriptionCssParam,
                     dir;
 
-                if( $el.offset().left < (w_dim.width / 2) ) {
-                    dir = 'left';
-                    ribbonCssParam.left 	= 0;
-                    ribbonCssParam.right 	= 'auto';
+                if(w_dim.width < 780){
+                    if( $el.offset().left < (w_dim.width / 4) ) {
+                        dir = 'left';
+                        ribbonCssParam.left 	= 0;
+                        ribbonCssParam.right 	= 'auto';
+                    }
+                    else {
+                        dir = 'right';
+                        ribbonCssParam.right 	= 0;
+                        ribbonCssParam.left 	= 'auto';
+                        $img.css('margin-left', '2rem');
+                    }
                 }
-                else {
-                    dir = 'right';
-                    ribbonCssParam.right 	= 0;
-                    ribbonCssParam.left 	= 'auto';
+                else{
+                    if( $el.offset().left < (w_dim.width / 2) ) {
+                        dir = 'left';
+                        ribbonCssParam.left 	= 0;
+                        ribbonCssParam.right 	= 'auto';
+                    }
+                    else {
+                        dir = 'right';
+                        ribbonCssParam.right 	= 0;
+                        ribbonCssParam.left 	= 'auto';
+                    }
                 }
 
                 $iw_ribbon.css(ribbonCssParam)
@@ -165,14 +180,14 @@ $(window).load(function(){
                         switch(dir) {
                             case 'left' :
                                 descriptionCssParam		= {
-                                    'left' 			: $img.outerWidth(true) + 'px',
+                                    'left' 			: $img.outerWidth(true)/40 + 'rem',
                                     'text-align' 	: 'left'
                                 };
                                 break;
                             case 'right' :
                                 descriptionCssParam		= {
-                                    'left' 			: '-200px',
-                                    'text-align' 	: 'right'
+                                    'left' 			: '-4rem',
+                                    'text-align' 	: 'right',
                                 };
                                 break;
                         };
@@ -208,11 +223,11 @@ $(window).load(function(){
                     $iw_ribbon.stop().animate({
                         opacity		: 0.8,
                         height 		: '0px',
-                        marginTop	: w_dim.height/2 + 'px' // half of window height
+                        marginTop	: w_dim.height/2 + 'rem' // half of window height
                     }, ribbonAnim.speed, function() {
                         $iw_ribbon.css({
                             'width'		: '0%',
-                            'height'	: '126px',
+                            'height'	: '2rem',
                             'margin-top': '0px'
                         }).children('img').remove();
                     });
@@ -228,9 +243,9 @@ $(window).load(function(){
 
                 // reset the image z-index and height
                 $img.css('z-index',1).stop().animate({
-                    height 		: $img.data('originalHeight')
+                    height 		: 1.7 + "rem",//$img.data('originalHeight')
                 }, imgAnim.speed,imgAnim.easing);
-
+                //$img.css('margin-left', '1.8rem');
                 // fadeOut the description
                 $descrp.fadeOut();
 
