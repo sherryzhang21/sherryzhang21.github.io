@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=no" />
+    <title>Session设置方法</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/content.css" rel="stylesheet">
+</head>
+<body>
+<div class="header">
+    <div class="top-menu">
+        <ul>
+            <li><a href="../index.html"><span class="glyphicon glyphicon-chevron-left"></span>&nbsp;BackHome</a></li>
+        </ul>
+    </div>
+    <div class="header-banner-info">
+        <img src="../img/head.jpg" alt="是不是傻" class="head-img img-circle"/>
+        <h3>HELLO</h3>
+        <h1>my name is <span>Sherry,</span> </h1>
+        <p>I'm a &nbsp;<del>coder</del>&nbsp;&nbsp;<strong>carrier</strong></p>
+    </div>
+</div>
+
+<div class="content-blog">
+    <div class="spinner">
+        <div class="rect1"></div>
+        <div class="rect2"></div>
+        <div class="rect3"></div>
+        <div class="rect4"></div>
+        <div class="rect5"></div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <p class="session">我发现我居然连session的设置方式都忘记了！！！</p>
+    </div>
+    <div class="row session-code">
+        <pre>
+import javax.servlet.http.HttpSession; //需要引入servlet-api.jar
+
+HttpSession session = request.getSession();
+session.setMaxInactiveInterval(时间);//设置失效时间, s为范围
+session.setAttribute("变量名", 值对象);
+session.getAttribute("变量名"); //此时取出来的是Object, 一般需要强转
+session.removeAttribute("变量名");
+session.invalidate(); //删除所有session中保存的键</pre>
+        <samp>HttpSession是不能new出来的,要从HttpServletRequest中调用getSession方法得到.一般也就是request.getSession();</samp>
+    </div>
+</div>
+
+<div class="content-contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3 content-info2">
+                联系我
+            </div>
+            <div class="col-xs-8 content-info2">
+                <span class="glyphicon glyphicon-send">&nbsp;sherryzhang21@outlook.com</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a class="go-top"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<div class="footer">
+    <div class="container-fluid">
+        <div class="copy-rights text-center">
+            <p>&copy; 2016 Template by <a href="https://sherryzhang21.github.io" target="target_blank">Sherryzhang21</a></p>
+        </div>
+    </div>
+</div>
+
+<script src="../js/jquery.js"></script>
+<script href="../js/bootstrap.min.js"></script>
+<script src="../js/flexible.js"></script>
+<script src="../js/jquery.smooth-scroll.js"></script>
+<script src="../js/jquery.ba-bbq.js"></script>
+<script src="../js/custom.js"></script>
+</body>
+</html>

@@ -170,6 +170,7 @@ $(window).load(function(){
                         dir = 'right';
                         ribbonCssParam.right 	= 0;
                         ribbonCssParam.left 	= 'auto';
+                        $img.css('margin-left', '2rem');
                     }
                 }
 
