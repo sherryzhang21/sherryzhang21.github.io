@@ -31,13 +31,11 @@
         <div class="rect4"></div>
         <div class="rect5"></div>
     </div>
-</div>
-
-<div class="container">
-    <div class="row">
-        <p class="session">我发现我居然连session的设置方式都忘记了！！！</p>
-    </div>
-    <div class="row session-code">
+    <div class="container">
+        <div class="row">
+            <p class="session">我发现我居然连session的设置方式都忘记了！！！</p>
+        </div>
+        <div class="row session-code">
         <pre>
 import javax.servlet.http.HttpSession; //需要引入servlet-api.jar
 
@@ -47,7 +45,8 @@ session.setAttribute("变量名", 值对象);
 session.getAttribute("变量名"); //此时取出来的是Object, 一般需要强转
 session.removeAttribute("变量名");
 session.invalidate(); //删除所有session中保存的键</pre>
-        <samp>HttpSession是不能new出来的,要从HttpServletRequest中调用getSession方法得到.一般也就是request.getSession();</samp>
+            <samp>HttpSession是不能new出来的,要从HttpServletRequest中调用getSession方法得到.一般也就是request.getSession();</samp>
+        </div>
     </div>
 </div>
 
